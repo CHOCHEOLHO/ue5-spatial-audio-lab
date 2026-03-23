@@ -1,0 +1,65 @@
+# ============================================================
+#  UE5 + Wwise Audio Test Project — .gitattributes (Git LFS)
+#  GitHub 개인 계정 LFS 용량: 1GB 무료 (초과시 데이터팩 구매)
+#  전략: 바이너리는 LFS, 텍스트는 일반 Git 추적
+# ============================================================
+
+# ── 기본값: 텍스트 파일 줄바꿈 통일 ──────────────────────────
+* text=auto
+
+# ── Unreal Engine 에셋 → LFS ────────────────────────────────
+*.uasset filter=lfs diff=lfs merge=lfs -text
+*.umap   filter=lfs diff=lfs merge=lfs -text
+
+# ── 오디오 파일 → LFS ────────────────────────────────────────
+*.wav    filter=lfs diff=lfs merge=lfs -text
+*.ogg    filter=lfs diff=lfs merge=lfs -text
+*.mp3    filter=lfs diff=lfs merge=lfs -text
+*.flac   filter=lfs diff=lfs merge=lfs -text
+*.aif    filter=lfs diff=lfs merge=lfs -text
+*.aiff   filter=lfs diff=lfs merge=lfs -text
+
+# Wwise 인코딩 오디오 (SoundBank 결과물)
+*.wem    filter=lfs diff=lfs merge=lfs -text
+*.bnk    filter=lfs diff=lfs merge=lfs -text
+*.pck    filter=lfs diff=lfs merge=lfs -text
+
+# ── 이미지 / 텍스처 → LFS ────────────────────────────────────
+*.png    filter=lfs diff=lfs merge=lfs -text
+*.jpg    filter=lfs diff=lfs merge=lfs -text
+*.jpeg   filter=lfs diff=lfs merge=lfs -text
+*.tga    filter=lfs diff=lfs merge=lfs -text
+*.bmp    filter=lfs diff=lfs merge=lfs -text
+*.psd    filter=lfs diff=lfs merge=lfs -text
+*.exr    filter=lfs diff=lfs merge=lfs -text
+*.hdr    filter=lfs diff=lfs merge=lfs -text
+
+# ── 3D / 애니메이션 → LFS ────────────────────────────────────
+*.fbx    filter=lfs diff=lfs merge=lfs -text
+*.obj    filter=lfs diff=lfs merge=lfs -text
+*.abc    filter=lfs diff=lfs merge=lfs -text
+
+# ── 빌드 바이너리 → LFS ──────────────────────────────────────
+*.dll    filter=lfs diff=lfs merge=lfs -text
+*.exe    filter=lfs diff=lfs merge=lfs -text
+*.lib    filter=lfs diff=lfs merge=lfs -text
+*.a      filter=lfs diff=lfs merge=lfs -text
+*.so     filter=lfs diff=lfs merge=lfs -text
+*.dylib  filter=lfs diff=lfs merge=lfs -text
+*.pdb    filter=lfs diff=lfs merge=lfs -text
+
+# ── 텍스트 파일 — 일반 Git 추적 (LFS 제외) ──────────────────
+*.uproject  text eol=lf
+*.ini       text eol=lf
+*.cfg       text eol=lf
+*.json      text eol=lf
+*.xml       text eol=lf
+*.csv       text eol=lf
+*.h         text eol=lf
+*.cpp       text eol=lf
+*.cs        text eol=lf
+*.py        text eol=lf
+*.md        text eol=lf
+*.txt       text eol=lf
+*.bat       text eol=crlf
+*.ps1       text eol=crlf

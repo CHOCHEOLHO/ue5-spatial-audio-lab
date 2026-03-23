@@ -1,0 +1,54 @@
+# ============================================================
+#  UE5 + Wwise Audio Test Project — .gitignore
+#  대상: GitHub 개인 저장소 / UE5 5.5 / Wwise 최신버전
+# ============================================================
+
+# ── Unreal Engine 빌드 & 임시 파일 ──────────────────────────
+Binaries/
+Build/
+DerivedDataCache/
+Intermediate/
+Saved/
+*.VC.db
+*.opensdf
+*.opendb
+*.sdf
+*.suo
+*.xcworkspace/
+
+# ── Visual Studio / Rider ───────────────────────────────────
+.vs/
+.idea/
+*.user
+*.suo
+*.sln  # 재생성 가능 — 필요시 주석 해제하여 포함
+*.vcxproj
+*.vcxproj.filters
+
+# ── Unreal 자동생성 프로젝트 파일 ───────────────────────────
+# .uproject는 반드시 추적 대상
+# *.uproject  ← 절대 ignore 금지
+
+# ── Wwise ───────────────────────────────────────────────────
+# WwiseCache: 매우 크고 재생성 가능
+Plugins/Wwise/WwiseCache/
+# GeneratedSoundBanks: 빌드 결과물 — CI에서 재생성하는 경우 ignore
+# 현재는 포함(추적)하는 것을 권장 (팀 없이 개인 작업 기준)
+# Content/WwiseAudio/GeneratedSoundBanks/
+
+# Wwise 프로젝트 내부 임시/캐시
+WwiseProject/.cache/
+WwiseProject/GeneratedSoundBanks/
+
+# ── OS 잡파일 ───────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+*.lnk
+
+# ── 로그 ────────────────────────────────────────────────────
+*.log
+
+# ── 패키지/배포 빌드 ─────────────────────────────────────────
+Packaged/
+PackagedBuilds/
